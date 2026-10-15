@@ -4,18 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ImmoBot AI Schweiz – Exposés für Schweizer Immobilienmakler</title>
-<meta name="description" content="Professionelle Immobilien-Exposés für Homegate und ImmoScout24 in Sekunden. Für Schweizer Maklerbüros. CHF 149.– pro Monat, 2 Gratis-Tests.">
+<meta name="description" content="Exposé-Texte für Homegate und ImmoScout24 in Sekunden. Für Schweizer Maklerbüros. 2 Gratis-Tests.">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{--navy:#0f2a43;--red:#d52b1e;--gold:#b8955a;--bg:#f7f8fa;--txt:#1f2933;--muted:#5b6876}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--txt);background:#fff;line-height:1.6}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--txt);line-height:1.6}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
 header{background:var(--navy);color:#fff}
 nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
 .logo{font-weight:700;font-size:1.2rem}.logo span{color:var(--gold)}
-.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;padding:14px 28px;border-radius:8px;font-weight:600;transition:.2s}
-.btn:hover{background:#b02218}
-.btn.sm{padding:9px 18px;font-size:.9rem}
+.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;padding:14px 28px;border-radius:8px;font-weight:600;border:0;cursor:pointer;font-size:1rem}
+.btn:hover{background:#b02218}.btn.sm{padding:9px 18px;font-size:.9rem}
+.btn.ghost{background:#fff;color:var(--navy);border:1px solid var(--navy);padding:6px 14px;font-size:.85rem}
 .hero{padding:70px 0 90px;text-align:center}
 .hero h1{font-size:clamp(1.9rem,4.5vw,3rem);line-height:1.2;margin-bottom:18px}
 .hero p{font-size:1.15rem;color:#d4dbe3;max-width:680px;margin:0 auto 30px}
@@ -23,104 +23,201 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0
 section{padding:70px 0}
 h2{font-size:clamp(1.5rem,3vw,2.1rem);color:var(--navy);text-align:center;margin-bottom:40px}
 .grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.card{background:var(--bg);padding:28px;border-radius:12px}
-.card h3{color:var(--navy);margin-bottom:8px}
+.card{background:var(--bg);padding:28px;border-radius:12px}.card h3{color:var(--navy);margin-bottom:8px}
 .num{display:inline-flex;width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;align-items:center;justify-content:center;font-weight:700;margin-bottom:14px}
 .alt{background:var(--bg)}
-.expose{background:#fff;border-radius:12px;box-shadow:0 6px 30px rgba(15,42,67,.1);padding:36px;max-width:800px;margin:0 auto}
-.expose .tag{font-size:.8rem;text-transform:uppercase;letter-spacing:1px;color:var(--red);font-weight:700}
-.expose h3{font-size:1.5rem;color:var(--navy);margin:8px 0 16px}
-.expose ul{margin:16px 0 16px 20px}
-.facts{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
-.facts span{background:var(--bg);padding:6px 12px;border-radius:6px;font-size:.9rem}
-.social{background:var(--bg);border-left:4px solid var(--gold);padding:16px;border-radius:6px;font-size:.95rem}
-.price{max-width:440px;margin:0 auto;text-align:center;border:2px solid var(--navy);border-radius:14px;padding:40px 30px}
-.price .amt{font-size:3rem;font-weight:800;color:var(--navy)}
-.price ul{list-style:none;margin:24px 0;text-align:left}
-.price li{padding:6px 0;border-bottom:1px solid #e6e9ee}
+.panel{background:#fff;border-radius:12px;box-shadow:0 6px 30px rgba(15,42,67,.1);padding:32px;max-width:860px;margin:0 auto}
+form .row{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin-bottom:16px}
+label{display:block;font-weight:600;font-size:.9rem;margin-bottom:4px;color:var(--navy)}
+input,select,textarea{width:100%;padding:10px;border:1px solid #cdd4dc;border-radius:6px;font:inherit}
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:6px;margin:8px 0 16px}
+.checks label{font-weight:400;display:flex;gap:8px;align-items:center;color:var(--txt)}
+.checks input{width:auto}
+.out{margin-top:28px;display:none}
+.block{background:var(--bg);border-radius:8px;padding:18px;margin-bottom:14px;white-space:pre-wrap}
+.block h4{display:flex;justify-content:space-between;align-items:center;color:var(--navy);margin-bottom:8px;white-space:normal}
+.note{font-size:.9rem;color:var(--muted);margin-bottom:14px}
+.paywall{display:none;margin-top:20px;padding:20px;border-left:4px solid var(--red);background:#fff4f3;border-radius:6px;font-weight:600}
+.price{max-width:440px;margin:0 auto;text-align:center;border:2px solid var(--navy);border-radius:14px;padding:40px 30px;background:#fff}
+.price .amt{font-size:2.6rem;font-weight:800;color:var(--navy)}
+.price ul{list-style:none;margin:24px 0;text-align:left}.price li{padding:6px 0;border-bottom:1px solid #e6e9ee}
 .price li:before{content:"✓ ";color:var(--red);font-weight:700}
 .muted{color:var(--muted);font-size:.9rem}
 footer{background:var(--navy);color:#c3ccd6;padding:30px 0;text-align:center;font-size:.9rem}
-@media(max-width:600px){.expose{padding:22px}section{padding:50px 0}}
+@media(max-width:600px){.panel{padding:20px}section{padding:50px 0}}
 </style>
 </head>
 <body>
-<header>
-<div class="wrap">
-<nav><div class="logo">ImmoBot <span>AI</span> Schweiz</div><a class="btn sm" href="#preis">Preis</a></nav>
+<header><div class="wrap">
+<nav><div class="logo">ImmoBot <span>AI</span> Schweiz</div><a class="btn sm" href="#tool">Jetzt gratis testen</a></nav>
 <div class="hero">
 <div class="badge">Für Schweizer Immobilienmakler</div>
-<h1>Verkaufsstarke Exposés in 60 Sekunden – statt in einer Stunde</h1>
-<p>Objektdaten im Chat erfassen, fertiges Exposé erhalten: Titel, Objektbeschreibung für Homegate und ImmoScout24, Highlights und Social-Media-Caption. In Schweizer Rechtschreibung und mit korrekten Fachbegriffen.</p>
-<a class="btn" href="#preis">Preis ansehen</a>
-<p class="muted" style="margin-top:14px;color:#9fb0c2">2 Exposés gratis testen, ohne Kreditkarte</p>
-</div>
-</div>
-</header>
+<h1>Exposé-Texte in Sekunden – statt in einer Stunde</h1>
+<p>Objektdaten erfassen und Titel, Objektbeschreibung für Homegate und ImmoScout24, Highlights und Social-Media-Caption erhalten. In Schweizer Rechtschreibung und mit korrekten Fachbegriffen.</p>
+<a class="btn" href="#tool">Jetzt gratis testen</a>
+<p class="muted" style="margin-top:14px;color:#9fb0c2">2 Exposés gratis · keine Anmeldung · Ihre Daten bleiben in Ihrem Browser</p>
+</div></div></header>
 
-<section>
-<div class="wrap">
+<section><div class="wrap">
 <h2>Ihr Nutzen</h2>
 <div class="grid">
 <div class="card"><h3>Zeit sparen</h3><p>Mehr Zeit für Besichtigungen und Akquise statt für das Formulieren von Inseratetexten.</p></div>
-<div class="card"><h3>Schweizer Standard</h3><p>Konsequente Schweizer Rechtschreibung mit «ss», Preise in CHF, Fachbegriffe wie Attikawohnung, Reduit, STWEG oder Nettowohnfläche nach BKP.</p></div>
-<div class="card"><h3>Einheitliche Qualität</h3><p>Hochwertiger, sachlicher Ton für alle Objekte Ihres Büros – bereit für Portale und Social Media.</p></div>
-</div>
-</div>
-</section>
+<div class="card"><h3>Schweizer Standard</h3><p>Schweizer Rechtschreibung, Preise in CHF, Fachbegriffe wie Attikawohnung, Reduit, STWEG oder Nettowohnfläche nach BKP.</p></div>
+<div class="card"><h3>Nur Ihre Angaben</h3><p>Der Text wird ausschliesslich aus Ihren Eingaben aufgebaut – es werden keine Fakten hinzuerfunden.</p></div>
+</div></div></section>
 
-<section class="alt">
-<div class="wrap">
+<section class="alt"><div class="wrap">
 <h2>So funktioniert es – in 3 Schritten</h2>
 <div class="grid">
-<div class="card" style="background:#fff"><div class="num">1</div><h3>Daten erfassen</h3><p>Objektart, Zimmer, Nettowohnfläche, Ort/Kanton, Preis in CHF und Besonderheiten im Chat eingeben.</p></div>
-<div class="card" style="background:#fff"><div class="num">2</div><h3>Exposé erhalten</h3><p>ImmoBot erstellt Titel, Objektbeschreibung, 3–4 Highlights und eine Caption mit Hashtags.</p></div>
-<div class="card" style="background:#fff"><div class="num">3</div><h3>Veröffentlichen</h3><p>Text prüfen, kopieren und direkt auf Homegate, ImmoScout24 oder Instagram verwenden.</p></div>
-</div>
-</div>
-</section>
+<div class="card" style="background:#fff"><div class="num">1</div><h3>Daten erfassen</h3><p>Objektart, Zimmer, Nettowohnfläche, Ort, Kanton, Preis und Besonderheiten eingeben.</p></div>
+<div class="card" style="background:#fff"><div class="num">2</div><h3>Exposé erhalten</h3><p>Titel, Objektbeschreibung, 3–4 Highlights und Caption mit Hashtags.</p></div>
+<div class="card" style="background:#fff"><div class="num">3</div><h3>Prüfen und verwenden</h3><p>Text kontrollieren, kopieren und auf Homegate, ImmoScout24 oder Social Media nutzen.</p></div>
+</div></div></section>
 
-<section>
-<div class="wrap">
-<h2>Beispiel-Exposé</h2>
-<div class="expose">
-<div class="tag">Beispiel – fiktives Objekt</div>
-<h3>Exklusive 4.5-Zimmer-Attikawohnung mit Lift direkt in die Wohnung</h3>
-<div class="facts"><span>4.5 Zimmer</span><span>128 m² NWF nach BKP</span><span>Oftringen AG</span><span>CHF 1'150'000</span></div>
-<p>Diese grosszügige Attikawohnung in Oftringen verbindet gehobenen Wohnkomfort mit einer ruhigen, gut erschlossenen Lage im Kanton Aargau. Der Lift führt Sie direkt in die Wohnung. Die Bodenheizung sorgt in allen Räumen für ein angenehmes Raumklima, das grosse Reduit mit eigenem Waschturm bietet viel Stauraum.</p>
-<ul>
-<li>Lift direkt in die Wohnung</li>
-<li>Grosses Reduit mit Waschturm</li>
-<li>2 Einstellhallenplätze</li>
-<li>Bodenheizung in allen Räumen</li>
-</ul>
-<div class="social">✨ Wohnen über den Dächern von Oftringen: 4.5-Zimmer-Attikawohnung, 128 m², Lift direkt in die Wohnung. CHF 1'150'000. #Attikawohnung #Oftringen #Aargau #Immobilien #Wohneigentum</div>
+<section id="tool"><div class="wrap">
+<h2>Exposé-Generator – jetzt gratis testen</h2>
+<div class="panel">
+<form id="f">
+<div class="row">
+<div><label for="objektart">Objektart</label><select id="objektart" required>
+<option>Attikawohnung</option><option>Wohnung</option><option>Einfamilienhaus</option><option>Reiheneinfamilienhaus</option><option>Doppeleinfamilienhaus</option><option>Mehrfamilienhaus</option></select></div>
+<div><label for="zimmer">Zimmer</label><input id="zimmer" placeholder="z. B. 4.5" required></div>
+<div><label for="flaeche">m² Nettowohnfläche nach BKP</label><input id="flaeche" type="number" min="1" placeholder="z. B. 128" required></div>
 </div>
+<div class="row">
+<div><label for="ort">Ort</label><input id="ort" placeholder="z. B. Oftringen" required></div>
+<div><label for="kanton">Kanton</label><select id="kanton" required></select></div>
+<div><label for="baujahr">Baujahr (optional)</label><input id="baujahr" type="number" min="1500" max="2035"></div>
 </div>
-</section>
+<div class="row">
+<div><label for="modus">Angebot</label><select id="modus"><option value="kauf">Kauf (Preis CHF)</option><option value="miete">Miete (CHF / Monat)</option></select></div>
+<div><label for="preis">Preis CHF</label><input id="preis" type="number" min="0" placeholder="z. B. 1150000"></div>
+<div><label for="ehp">Anzahl Einstellhallenplätze</label><input id="ehp" type="number" min="0" placeholder="optional"></div>
+</div>
+<label>Besonderheiten</label>
+<div class="checks" id="checks"></div>
+<label for="freitext">Weitere Merkmale (Freitext, optional)</label>
+<textarea id="freitext" rows="3" placeholder="z. B. Küche 2022 erneuert"></textarea>
+<p style="margin-top:18px"><button class="btn" type="submit">Exposé erstellen</button> <span class="muted" id="rest"></span></p>
+</form>
+<div class="paywall" id="paywall"></div>
+<div class="out" id="out">
+<p class="note">Automatisch aus Ihren Angaben erstellt, bitte vor Veröffentlichung prüfen.</p>
+<div class="block"><h4>Titel <button class="btn ghost" data-copy="o-titel">Kopieren</button></h4><div id="o-titel"></div></div>
+<div class="block"><h4>Objektbeschreibung <button class="btn ghost" data-copy="o-beschr">Kopieren</button></h4><div id="o-beschr"></div></div>
+<div class="block"><h4>Highlights <button class="btn ghost" data-copy="o-hl">Kopieren</button></h4><div id="o-hl"></div></div>
+<div class="block"><h4>Social-Media-Caption <button class="btn ghost" data-copy="o-cap">Kopieren</button></h4><div id="o-cap"></div></div>
+</div>
+</div></div></section>
 
-<section class="alt">
-<div class="wrap">
-<h2 id="preis">Ein Preis. Alles inklusive.</h2>
-<div class="price" style="background:#fff">
-<div class="amt">CHF 149.–</div><div class="muted">pro Monat, monatlich kündbar</div>
-<ul>
-<li>Unbegrenzte Exposé-Generierungen</li>
-<li>Texte für Homegate und ImmoScout24</li>
-<li>Highlights und Social-Media-Captions</li>
-<li>Schweizer Rechtschreibung und Fachbegriffe</li>
-<li>2 Gratis-Tests vor dem Abo</li>
-</ul>
-<a class="btn" href="#preis">Abo-Start in Kürze</a>
-</div>
-</div>
-</section>
+<section class="alt"><div class="wrap">
+<h2>Preis</h2>
+<div class="price">
+<div class="amt">CHF 149.–/Monat</div><div class="muted">nach der Testphase (Abo-Start in Kürze)</div>
+<ul><li>2 Gratis-Exposés zum Testen</li><li>Texte für Homegate und ImmoScout24</li><li>Highlights und Social-Media-Captions</li><li>Schweizer Rechtschreibung und Fachbegriffe</li></ul>
+<a class="btn" href="#tool">Jetzt gratis testen</a>
+</div></div></section>
 
-<footer>
-<div class="wrap">
-<p>ImmoBot AI Schweiz</p>
-<p class="muted" style="color:#8ea0b3">Ihr ImmoBot-Team</p>
-</div>
-</footer>
+<footer><div class="wrap"><p>ImmoBot AI Schweiz</p><p class="muted" style="color:#8ea0b3">Ihr ImmoBot-Team</p></div></footer>
+
+<script>
+// ImmoBot Exposé-Generator (rein clientseitig, keine Daten verlassen den Browser)
+function chf(n){n=Math.round(Number(String(n).replace(/[^0-9.]/g,'')));if(!n)return '';return "CHF "+String(n).replace(/\B(?=(\d{3})+(?!\d))/g,"'");}
+function zi(z){return String(z).replace(',','.');}
+function noSz(s){return s.replace(/\u00df/g,'ss');}
+var WOHNUNGEN=['Attikawohnung','Wohnung'];
+function artText(a){return {'Wohnung':'Wohnung','Attikawohnung':'Attikawohnung','Einfamilienhaus':'Einfamilienhaus','Reiheneinfamilienhaus':'Reiheneinfamilienhaus','Doppeleinfamilienhaus':'Doppeleinfamilienhaus','Mehrfamilienhaus':'Mehrfamilienhaus'}[a]||a;}
+function pick(arr,seed){return arr[Math.abs(seed)%arr.length];}
+function generate(d){
+  var f=d.features||[], has=function(x){return f.indexOf(x)>=0;};
+  var art=artText(d.objektart), z=zi(d.zimmer), m2=d.flaeche, ort=(d.ort||'').trim(), kt=d.kanton;
+  var isMiete=d.modus==='miete', preis=chf(d.preis);
+  var preisTxt=preis?(isMiete?preis+" pro Monat":preis):'';
+  var seed=(ort.length*7+Number(m2||0)+Number(String(z).replace('.','')||0));
+  var isWhg=WOHNUNGEN.indexOf(d.objektart)>=0;
+  var stweg=has('STWEG');
+  var zimmerTeil=z?z+"-Zimmer-":"";
+  // Titel
+  var tZusatz=has('Lift direkt in die Wohnung')?' mit Lift direkt in die Wohnung':has('Seesicht/Bergsicht/Aussicht')?' mit Aussicht':has('Garten')?' mit Garten':has('Balkon/Terrasse')?(d.objektart==='Attikawohnung'?' mit Terrasse':' mit Balkon/Terrasse'):'';
+  var adj=pick(['Gepflegte','Attraktive','Hochwertige','Grosszügige'],seed);
+  if(d.objektart==='Attikawohnung')adj=pick(['Exklusive','Hochwertige','Grosszügige'],seed);
+  var titel=(adj+" "+zimmerTeil+art+" in "+ort+(kt?" "+kt:"")+tZusatz).replace(/\s+/g,' ');
+  if(d.objektart==='Einfamilienhaus'||d.objektart.indexOf('einfamilienhaus')>0||d.objektart==='Mehrfamilienhaus'){titel=titel.replace(adj,adj.replace(/e$/,'es'));}
+  // Beschreibung
+  var p=[];
+  var einl=[
+    "Diese "+(d.objektart==='Wohnung'?"Wohnung":art)+" in "+ort+(kt?" ("+kt+")":"")+" bietet "+(z?z+" Zimmer":"Raum")+(m2?" auf "+m2+" m² Nettowohnfläche nach BKP":"")+".",
+    "In "+ort+(kt?" im Kanton "+KANTONE[kt]:"")+" steht "+(isWhg?"diese ":"dieses ")+art+" mit "+(z?z+" Zimmern":"durchdachter Raumaufteilung")+(m2?" und "+m2+" m² Nettowohnfläche nach BKP":"")+" zum "+(isMiete?"Mieten":"Kauf")+" bereit."
+  ];
+  var e=pick(einl,seed);
+  if(!isWhg && d.objektart!=='Wohnung'){e=e.replace(/^Diese /,'Dieses ');}
+  if(stweg&&!isMiete)e+=" Das Objekt wird im Stockwerkeigentum (STWEG) angeboten.";
+  if(d.baujahr)e+=" Baujahr: "+d.baujahr+".";
+  p.push(e);
+  var komfort=[];
+  if(has('Lift direkt in die Wohnung'))komfort.push("Der Lift führt direkt in die Wohnung und ermöglicht einen komfortablen, privaten Zugang");
+  if(has('Bodenheizung'))komfort.push("die Bodenheizung sorgt für ein gleichmässiges Raumklima");
+  if(has('Minergie'))komfort.push("der Minergie-Standard steht für Energieeffizienz und Wohnkomfort");
+  if(has('Cheminee'))komfort.push("ein Cheminée setzt im Wohnbereich einen behaglichen Akzent");
+  if(komfort.length){p.push(komfort.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+".";}).join(" "));}
+  var raum=[];
+  if(has('Reduit')&&has('Waschturm'))raum.push("Ein Reduit mit eigenem Waschturm schafft zusätzlichen Stauraum und eine private Waschmöglichkeit.");
+  else{if(has('Reduit'))raum.push("Ein Reduit bietet zusätzlichen Stauraum.");if(has('Waschturm'))raum.push("Ein eigener Waschturm macht den Alltag unabhängig von einer gemeinschaftlichen Waschküche.");}
+  if(has('Einstellhallenplatz'))raum.push(d.ehp>1?"Zum Objekt gehören "+d.ehp+" Einstellhallenplätze.":"Zum Objekt gehört ein Einstellhallenplatz.");
+  if(raum.length)p.push(raum.join(" "));
+  var aussen=[];
+  if(has('Balkon/Terrasse'))aussen.push(d.objektart==='Attikawohnung'?"Die Terrasse erweitert den Wohnraum ins Freie.":"Ein Balkon bzw. eine Terrasse lädt zum Verweilen im Freien ein.");
+  if(has('Garten'))aussen.push("Der Garten bietet Platz für Erholung und Freizeit im Grünen.");
+  if(has('Seesicht/Bergsicht/Aussicht'))aussen.push("Die Aussicht zählt zu den besonderen Qualitäten dieses Objekts.");
+  if(aussen.length)p.push(aussen.join(" "));
+  if(d.freitext&&d.freitext.trim())p.push("Weitere Merkmale: "+d.freitext.trim().replace(/\.?$/,'.'));
+  p.push((preisTxt?(isMiete?"Mietzins: ":"Verkaufspreis: ")+preisTxt+". ":"")+pick(["Gerne stellen wir Ihnen weitere Unterlagen zur Verfügung und vereinbaren einen Besichtigungstermin.","Für weitere Informationen oder eine Besichtigung stehen wir Ihnen gerne zur Verfügung."],seed));
+  // Highlights
+  var map={'Lift direkt in die Wohnung':'Lift direkt in die Wohnung','Reduit':has('Waschturm')?'Reduit mit Waschturm':'Reduit','Waschturm':has('Reduit')?null:'Eigener Waschturm','Einstellhallenplatz':d.ehp>1?d.ehp+' Einstellhallenplätze':'Einstellhallenplatz','Bodenheizung':'Bodenheizung','Balkon/Terrasse':d.objektart==='Attikawohnung'?'Terrasse':'Balkon/Terrasse','Seesicht/Bergsicht/Aussicht':'Aussicht','Minergie':'Minergie-Standard','Garten':'Garten','Cheminee':'Cheminée','STWEG':null};
+  var hl=[];f.forEach(function(x){if(map[x])hl.push(map[x]);});
+  if(hl.length<3&&m2)hl.push(m2+" m² Nettowohnfläche nach BKP");
+  if(hl.length<3&&z)hl.push(z+" Zimmer");
+  if(hl.length<3&&ort)hl.push("Lage in "+ort+(kt?" "+kt:""));
+  hl=hl.slice(0,4);
+  // Caption
+  var tags=["#"+art.replace(/[^A-Za-zÄÖÜäöüé]/g,''),"#"+ort.replace(/[^A-Za-zÄÖÜäöü]/g,''),kt?"#"+KANTONE[kt].replace(/[^A-Za-zÄÖÜäöü]/g,''):"","#Immobilien","#ImmobilienSchweiz",isMiete?"#Mietwohnung":"#Wohneigentum",stweg?"#Stockwerkeigentum":"","#Homegate","#ImmoScout24"].filter(Boolean);
+  var cap=zimmerTeil+art+" in "+ort+(kt?" "+kt:"")+(m2?", "+m2+" m² NWF":"")+(hl.length?", "+hl.slice(0,3).join(", "):"")+"."+(preisTxt?"\n"+preisTxt:"")+"\nJetzt Unterlagen anfordern und Besichtigung vereinbaren.\n\n"+tags.join(" ");
+  var out={titel:noSz(titel),beschreibung:noSz(p.join("\n\n")),highlights:hl.map(noSz),caption:noSz(cap)};
+  return out;
+}
+var KANTONE={AG:'Aargau',AI:'Appenzell Innerrhoden',AR:'Appenzell Ausserrhoden',BE:'Bern',BL:'Basel-Landschaft',BS:'Basel-Stadt',FR:'Freiburg',GE:'Genf',GL:'Glarus',GR:'Graubünden',JU:'Jura',LU:'Luzern',NE:'Neuenburg',NW:'Nidwalden',OW:'Obwalden',SG:'St. Gallen',SH:'Schaffhausen',SO:'Solothurn',SZ:'Schwyz',TG:'Thurgau',TI:'Tessin',UR:'Uri',VD:'Waadt',VS:'Wallis',ZG:'Zug',ZH:'Zürich'};
+var FREE_LIMIT=2;
+function canGenerate(store){return Number(store.getItem('immobot_count')||0)<FREE_LIMIT;}
+function registerGeneration(store){store.setItem('immobot_count',Number(store.getItem('immobot_count')||0)+1);}
+var PAYWALL="Deine Test-Guthaben sind aufgebraucht. Unbegrenzter Zugriff für CHF 149.– / Monat folgt in Kürze.";
+if(typeof module!=='undefined')module.exports={generate:generate,chf:chf,canGenerate:canGenerate,registerGeneration:registerGeneration,PAYWALL:PAYWALL,KANTONE:KANTONE};
+
+(function(){
+var feats=['Lift direkt in die Wohnung','Reduit','Waschturm','Einstellhallenplatz','Bodenheizung','Balkon/Terrasse','Seesicht/Bergsicht/Aussicht','Minergie','Garten','Cheminee','STWEG'];
+var lbl={'Cheminee':'Cheminée','STWEG':'STWEG / Stockwerkeigentum'};
+var c=document.getElementById('checks');
+feats.forEach(function(x){var l=document.createElement('label');var i=document.createElement('input');i.type='checkbox';i.value=x;l.appendChild(i);l.appendChild(document.createTextNode(lbl[x]||x));c.appendChild(l);});
+var k=document.getElementById('kanton');
+Object.keys(KANTONE).forEach(function(x){var o=document.createElement('option');o.value=x;o.textContent=x+' – '+KANTONE[x];if(x==='AG')o.selected=true;k.appendChild(o);});
+document.getElementById('modus').addEventListener('change',function(){document.querySelector('label[for=preis]').textContent=this.value==='miete'?'Miete CHF / Monat':'Preis CHF';});
+var store;try{store=window.localStorage;store.getItem('x');}catch(e){var m={};store={getItem:function(a){return m[a]},setItem:function(a,b){m[a]=String(b)}};}
+function rest(){var n=FREE_LIMIT-Number(store.getItem('immobot_count')||0);document.getElementById('rest').textContent=n>0?'Verbleibende Gratis-Tests: '+n:'';}
+rest();
+var pw=document.getElementById('paywall');
+document.getElementById('f').addEventListener('submit',function(ev){ev.preventDefault();
+if(!canGenerate(store)){pw.textContent=PAYWALL;pw.style.display='block';document.getElementById('out').style.display='none';return;}
+var v=function(id){return document.getElementById(id).value;};
+var d={objektart:v('objektart'),zimmer:v('zimmer'),flaeche:v('flaeche'),ort:v('ort'),kanton:v('kanton'),baujahr:v('baujahr'),modus:v('modus'),preis:v('preis'),ehp:Number(v('ehp')||0),freitext:v('freitext'),features:[].map.call(c.querySelectorAll('input:checked'),function(i){return i.value;})};
+var r=generate(d);registerGeneration(store);
+document.getElementById('o-titel').textContent=r.titel;
+document.getElementById('o-beschr').textContent=r.beschreibung;
+document.getElementById('o-hl').textContent=r.highlights.map(function(h){return '• '+h;}).join('\n');
+document.getElementById('o-cap').textContent=r.caption;
+document.getElementById('out').style.display='block';rest();
+if(!canGenerate(store)){pw.textContent='Das war Ihr letzter Gratis-Test.';pw.style.display='block';}
+});
+document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){var t=document.getElementById(b.dataset.copy).textContent;var done=function(){b.textContent='Kopiert';setTimeout(function(){b.textContent='Kopieren';},1500);};if(navigator.clipboard)navigator.clipboard.writeText(t).then(done,function(){});else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();done();}});});
+})();
+</script>
 </body>
 </html>
