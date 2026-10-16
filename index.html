@@ -2,6 +2,7 @@
 <html lang="de-CH">
 <head>
 <meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ImmoBot AI Schweiz – Exposés für Schweizer Immobilienmakler</title>
 <meta name="description" content="Exposé-Texte für Homegate und ImmoScout24 in Sekunden. Für Schweizer Maklerbüros. 2 Gratis-Tests.">
@@ -55,7 +56,7 @@ footer{background:var(--navy);color:#c3ccd6;padding:30px 0;text-align:center;fon
 <h1>Exposé-Texte in Sekunden – statt in einer Stunde</h1>
 <p>Objektdaten erfassen und Titel, Objektbeschreibung für Homegate und ImmoScout24, Highlights und Social-Media-Caption erhalten. In Schweizer Rechtschreibung und mit korrekten Fachbegriffen.</p>
 <a class="btn" href="#tool">Jetzt gratis testen</a>
-<p class="muted" style="margin-top:14px;color:#9fb0c2">2 Exposés gratis · keine Anmeldung · Ihre Daten bleiben in Ihrem Browser</p>
+<p class="muted" style="margin-top:14px;color:#9fb0c2">2 Gratis-Tests · keine Anmeldung · Ihre Daten bleiben in Ihrem Browser</p>
 </div></div></header>
 
 <section><div class="wrap">
@@ -111,12 +112,9 @@ footer{background:var(--navy);color:#c3ccd6;padding:30px 0;text-align:center;fon
 </div></div></section>
 
 <section class="alt"><div class="wrap">
-<h2>Preis</h2>
-<div class="price">
-<div class="amt">CHF 149.–/Monat</div><div class="muted">nach der Testphase (Abo-Start in Kürze)</div>
-<ul><li>2 Gratis-Exposés zum Testen</li><li>Texte für Homegate und ImmoScout24</li><li>Highlights und Social-Media-Captions</li><li>Schweizer Rechtschreibung und Fachbegriffe</li></ul>
-<a class="btn" href="#tool">Jetzt gratis testen</a>
-</div></div></section>
+<h2>Kostenlose Testphase – Abo-Modelle folgen.</h2>
+<p style="text-align:center"><a class="btn" href="#tool">Jetzt gratis testen</a></p>
+</div></section>
 
 <footer><div class="wrap"><p>ImmoBot AI Schweiz</p><p class="muted" style="color:#8ea0b3">Ihr ImmoBot-Team</p></div></footer>
 
@@ -189,7 +187,7 @@ var KANTONE={AG:'Aargau',AI:'Appenzell Innerrhoden',AR:'Appenzell Ausserrhoden',
 var FREE_LIMIT=2;
 function canGenerate(store){return Number(store.getItem('immobot_count')||0)<FREE_LIMIT;}
 function registerGeneration(store){store.setItem('immobot_count',Number(store.getItem('immobot_count')||0)+1);}
-var PAYWALL="Deine Test-Guthaben sind aufgebraucht. Unbegrenzter Zugriff für CHF 149.– / Monat folgt in Kürze.";
+var PAYWALL="Ihre Gratis-Tests sind aufgebraucht. Abo-Modelle folgen in Kürze.";
 if(typeof module!=='undefined')module.exports={generate:generate,chf:chf,canGenerate:canGenerate,registerGeneration:registerGeneration,PAYWALL:PAYWALL,KANTONE:KANTONE};
 
 (function(){
